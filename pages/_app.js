@@ -1,13 +1,14 @@
 import '../styles/globals.css'
 import Navbar from '../components/Navbar'
+import { AuthProvider } from '../lib/context'
+
 
 function MyApp({ Component, pageProps }) {
   return (
-    <div className="">
+    <AuthProvider>
       <Navbar /> 
       <Component {...pageProps} />
-    </div>
-
+    </AuthProvider>
   )
 }
 
